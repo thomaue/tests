@@ -1,0 +1,88 @@
+Les structures ;
+
+
+[syntaxe déclaration variable]
+
+struct //nom_structure//
+{
+    ...
+}
+
+
+
+[exemple déclaration variable de type struct]
+
+struct temps{
+    unsigned heures;
+    unsigned minutes;
+    double secondes;
+};
+
+int main(void)
+{
+    struct temps t;     // struct nom_structure identificateur;
+
+    return 0;
+}
+
+
+[initialisation séquentielle]
+
+struct  temps t = { 1, 45, 30.560};            ->                heures = 1, minutes = 45, secondes = 30.560 (réagit selon l'orde de définition)
+
+
+ou
+
+
+[initialisation séléctive]
+
+struct temps t = {.secondes = 30.560, .heures = 1, .minutes = 45};
+
+
+[acceder à un membre de la structure]
+
+variable.membre
+
+t.heures = 1;
+t.minutes = 45;
+t.secondes = 30.560;
+
+
+
+
+
+
+[création pointeur vers structure]
+
+[syntaxe]
+
+struct temps *p
+
+[accès]
+
+*p.heures = 1;      //accède au champ heures 
+
+ou
+
+p->heures = 1    la flèche étant un raccourci prévu par le language ce qui signifie en réalité :
+
+(*p).heures = 1
+
+                nous essayons ici d'acceder a la valeur contenue dans heures.
+
+
+
+[exemple : initialisation de la structure t via le pointeur p]
+
+
+struct temps t;
+struct temps *p = &t;
+
+p->heures = 1;
+p->minutes = 45;
+p ->secondes = 30.560;
+
+
+
+
+
