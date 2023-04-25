@@ -1,0 +1,21 @@
+# <cible> : <dépendance>
+#	<commande>
+
+# $(Var_name) call a variable
+
+#spécial var :
+# $@ -> current target
+# $< -> first dependencies
+# $^ -> dependencies list
+# $? -> dependencies list recently updates
+# $* -> file name without his extension
+
+#conditions :
+
+#ifndef
+
+#ifeq ($(var_name), <value>)
+#	<command>
+
+#else
+#	<command>
