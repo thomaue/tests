@@ -1,21 +1,47 @@
-# <cible> : <dépendance>
-#	<commande>
+un makefile est un fichier qui permet de lire des regles qui vont generer 
+des programmes en compilant seulement les parties modifiées.
 
-# $(Var_name) call a variable
 
-#spécial var :
-# $@ -> current target
-# $< -> first dependencies
-# $^ -> dependencies list
-# $? -> dependencies list recently updates
-# $* -> file name without his extension
+syntaxe :
 
-#conditions :
+<target> : <pre-requisites>
+	<recipe>
 
-#ifndef
+----------------------------------------
 
-#ifeq ($(var_name), <value>)
-#	<command>
+all: file1   
+    cat file1 > file2
 
-#else
-#	<command>
+file1:
+    echo "hello" > file1
+
+$(Var_name) call a variable
+
+
+-----------------------------------------
+
+clean:
+    rm file1 file2 
+
+spécial var :
+ $@ -> current target
+ $< -> first dependencies
+ $^ -> dependencies list
+ $? -> dependencies list recently updates
+ $* -> file name without his extension
+
+
+
+
+
+
+
+conditions :
+
+ifndef
+
+ifeq ($(var_name), <value>)
+	<command>
+
+else
+	<command>
