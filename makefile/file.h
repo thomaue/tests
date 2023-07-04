@@ -1,8 +1,7 @@
 #ifndef __file__
 #define __file__
 
-
-void ft_putstr(char *str);
-
+void ft_show_tab(int *tab);
+int str_hour(char *str);
 
 #endif
