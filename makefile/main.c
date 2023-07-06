@@ -16,9 +16,6 @@ int main(void)
         i++;
     }
 
-
-
-
     printf("welcome on planner\n\n");
 
     while(*swit < 3)
