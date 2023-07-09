@@ -1,19 +1,24 @@
-#include <unistd.h>
+#include <stdio.h>
 
 void ft_show_tab(char **tab)
 {
     int i = 0;
-    int i2 = 0;
-
-    while(tab[i])
+    
+    for(i = 0; i < 4; i++)
     {
-        while(tab[i][i2])
-        {
-            write(1, &tab[i][i2], 1);
-            i2++;
-        }
-        i++;
-        i2=0;
+        if(i == 2)
+            printf("The happiness of your life depends upon the quality of your thoughts.");
+        printf("\n");
     }
-    write(1, "\n", 2);
+
+
+    for(i = 0; i < 24; i++)
+    {
+        if(i < 10)
+            printf(" ");
+        printf("%d h : %s\n", i, tab[i]);
+    }
+
+    for(i = 0; i < 2; i++)
+        printf("\n");
 }
