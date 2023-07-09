@@ -12,14 +12,15 @@ int main(void)
 
     int i = 0;
 
-    char **day = (char **)malloc(sizeof(char *) * 25);
-    while(i < 25)
+    char **day = (char **)malloc(sizeof(char *) * 24);
+    while(i < 24)
     {
-        day[i] = "Nothing";
+        day[i] = "empty";
         i++;
     }
+    day[i] = '\0';
 
-    printf("welcome on planner\n\n");
+    printf("welcome on day planner\n\n");
 
     while(swit < 3)
     {
@@ -28,7 +29,7 @@ int main(void)
         swit = *ptr;
         if(swit == 0)
         {
-            // ft_show_tab(lundi);
+            ft_show_tab(day);
         }
 
         else if(swit == 1)
